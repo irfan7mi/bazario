@@ -1,0 +1,191 @@
+.LogIn{
+    background-color: rgba(90, 82, 82, 0.719);
+    display: grid;
+    z-index: 2px;
+    width: 50%;
+    margin-top: -80px;
+    position: absolute;
+    height: fit-content;
+    min-height: 100%;
+}
+
+.LogIn-container{
+    place-self: center;
+    background-color: rgb(255, 255, 255);
+    max-width: 300px;
+    width: 300px;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(194, 147, 147, 0.596);
+    align-items: center;
+    padding: 15px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.LogIn-title{
+    text-align: center;
+    margin: 0px 0px 15px;
+}
+
+.LogIn-title h3{
+    text-align: center;
+    display: inline;
+    font-weight: 600;
+    padding: 0px 10px;
+}
+
+.check-box{
+    cursor: pointer;
+}
+
+.LogIn-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.LogIn-inputs input{
+    padding: 8px;
+    border-radius: 2px;
+    outline-style: none;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(194, 147, 147, 0.671);
+}
+
+.LogIn-inputs button{
+    margin-top: 12px;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 2px;
+    background-color: rgb(151, 69, 69);
+    color: white;
+    outline-style: none;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(194, 147, 147, 0.671);
+    cursor: pointer;
+}
+
+.LogIn-policy{
+    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    align-self: start;
+}
+
+.new-account{
+    margin-top: 15px;
+    font-size: 12px;
+    align-self: start;
+    margin-left: 30px;
+}
+
+.new-account span{
+    font-weight: bolder;
+    color: tomato;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.cancel-btn{
+    cursor: pointer;
+    border: 1px solid rgba(255, 99, 71, 0.308);
+    padding: 4px 8px;
+    font-size: 12px;
+    background-color: rgb(151, 69, 69);
+    color: white;
+    border-top-right-radius: 27%;
+    border-bottom-left-radius: 27%;
+    font-weight: 400;
+    margin-top: -13.8px;
+    left: 273.5px;
+    position: absolute;
+    width: max-content;
+}
+
+.cancel-btn:hover{
+    background-color: white;
+    color: black;
+    box-shadow: none;
+}
+
+@media (max-width: 576px) {
+    .LogIn{
+        margin: -50px auto 0px;
+        align-items: center;
+        width: 100vw;
+        z-index: 1;
+    }
+    
+    .LogIn-container{
+        padding: 30px 0px 30px;
+        width: 70%;
+    }
+
+    .LogIn-title{
+        text-align: center;
+        position: a;
+        margin-bottom: 15px;
+    }
+
+    .LogIn-title h3{
+        font-size: 24px;
+    }
+
+    .check-box{
+        cursor: pointer;
+    }
+
+    .LogIn-inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 80%;
+    }
+
+    .LogIn-inputs input{
+        padding: 10px;
+     }
+
+    .LogIn-inputs button{
+        margin-top: 12px;
+        padding: 10px;
+    }
+
+    .LogIn-policy{
+        margin-top: 20px;
+        margin-left: 40px;
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .new-account{
+        margin-top: 15px;
+        font-size: 12px;
+        margin-left: 40px;
+    }
+
+    .new-account span{
+        font-size: 14px;
+    }
+
+    .cancel-btn{
+        padding: 4px 6px;
+        font-size: 14px;
+        margin-top: -30.7px;
+        margin-left: -17px;
+        position: absolute;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .LogIn{
+        width: 100%;
+    }
+}

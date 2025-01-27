@@ -1,0 +1,243 @@
+.cart-items{
+    margin-bottom: -10px;
+}
+
+.cart-item-title{
+    margin-left: 4vw;
+    font-weight: 700;
+    display: grid;
+    color: rgb(117, 95, 95);
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr;
+}
+
+.cart-item-image{
+    width: 60px;
+    height: 35px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px rgb(216, 200, 200);
+}
+
+.cart-item-list{
+    align-items: center;
+    font-weight: 400;
+    margin-top: 7px;
+    font-size: 14px;
+    color: black;
+}
+
+.h-line{
+    border: 0.1px solid rgba(236, 195, 195, 0.247);
+    margin: 5px auto;
+}
+
+.remove-cart{
+    background-color: rgb(151, 69, 69);
+    text-align: center;
+    width: 10px;
+    padding: 3px 5px;
+    justify-self: center;
+    font-size: 12px;
+    margin-left: -90px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.remove-cart:hover{
+    background-color: rgba(151, 69, 69, 0.801);
+}
+
+@media (min-width: 576px) {
+.cart-container{
+    margin: 110px 50px 0px;
+}
+
+.cart-bottom{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    gap: 25px;
+}
+}
+
+.delivery-details-container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.delivery-details-container input{
+    padding: 8px 14px;
+    border-radius: 2px;
+    border: 1px solid rgba(143, 125, 125, 0.514);
+}
+
+.two-input{
+    display: flex;
+    gap: 10px;
+}
+
+.cart-heading{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cart-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculate-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.total-amount{
+    font-weight: 600;
+}
+
+.proceed-button{
+    width: 180px;
+    padding: 12px 2px;
+    background-color: rgb(151, 69, 69);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 10vh;
+}
+
+.proceed-button:hover{
+    background-color: rgba(151, 69, 69, 0.801);
+}
+
+.promo-code-container{
+    margin-top: -80px;
+    gap: 5px;
+    box-shadow: 0px 0px 6px rgb(216, 200, 200);;
+    padding: 15px 20px;
+    border-radius: 3px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 10%;
+}
+
+.promo-input{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+}
+
+.promo-input input{
+    padding: 7px 10px;
+    border: 1px solid rgba(143, 125, 125, 0.514);
+    border-radius: 3px 0px 0px 3px;
+    outline-style: none;
+}
+
+.promo-input button{
+    padding: 7px 12px;
+    background-color: rgb(151, 69, 69);
+    border: 1px solid rgba(143, 125, 125, 0.514);
+    border-left: 0px;
+    color: white;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+}
+
+.promo-input button:hover{
+    background-color: black;
+}
+
+.promo-content{
+    font-size: 14px;
+}
+
+.promo-content span{
+    cursor: pointer;
+    color: blue;
+}
+
+.cancel-promo{
+    background-color: rgb(151, 69, 69);
+    width: fit-content;
+    padding: 1px 4px;
+    margin: -15px -20px 5px auto;
+    font-size: 12px;
+    color: white;
+    border-radius: 0px 3px 0px 3px;
+    border: 1px solid rgba(143, 125, 125, 0.267);
+    cursor: pointer;
+}
+
+.cancel-promo:hover{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 576px) {
+    .cart-container{
+         margin: 110px 10px 0px;  
+    }
+
+    .cart-item-title{
+        gap: 10px;
+        font-size: 14px;
+        grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .cart-item-image{
+        border-radius: 2px;
+    }
+
+    .cart-item-list{
+        font-size: 12px;
+    }
+
+    .remove-cart{
+        margin-left: 30px;
+    }
+    
+    .cart-bottom{
+        margin-top: 10px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .delivery-details-container{
+        margin: 5px auto 0px;
+        width: fit-content;
+    }
+
+    .delivery-details-container input{
+        width: 100%;
+        margin: 0px -10px;
+        padding: 7px 8px;
+        border-radius: 2px;
+        border: 1px solid rgb(170, 142, 142);
+    }
+    .two-input{
+        max-width: 85vw;
+    }
+
+    .two-input input{
+        width: 38vw;
+        display: flex;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    
+}

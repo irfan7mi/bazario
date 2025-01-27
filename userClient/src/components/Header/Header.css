@@ -1,0 +1,170 @@
+.header{
+    max-height: 290px;
+    background-color: rgba(245, 222, 179, 0.24);
+    box-shadow: 0px 0px 6px rgb(216, 200, 200);
+    margin: 95px auto 10px;
+    background-color: rgb(151, 69, 69);
+    color: white;
+}
+
+.header-contents{
+    margin-left: 25px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: start;
+    animation: FadeIn 3s;
+}
+
+@keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.header-title{
+    width: max-content;
+}
+
+.discount-container h1{
+    font-size: 28px;
+    color: beige;
+}
+
+.discount-container{
+    margin: auto;
+    text-align: center;
+}
+
+.discount-container .view-btn{
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 1.5px solid rgba(143, 125, 125, 0.514);
+    cursor: pointer;
+    background-color: white;
+}
+
+.view-btn:hover{
+    background-color: rgb(151, 69, 69);
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .header-contents h1{
+        margin-top: 25px;
+        font-size: 54px;
+    }
+    .header{
+        height: 70vh;
+        background-position-y: -90px;
+    } 
+}
+
+@media (max-width: 1165px) {
+    .header-contents h1{
+        margin-top: 25px;
+        font-size: 50px;
+    }
+    .header{
+        height: 70vh;
+        background-position-y: -90px;
+    } 
+}
+
+@media (max-width: 1080px) {
+    .header-contents h1{
+        margin-top: 25px;
+        font-size: 48px;
+    }
+    .header{
+        height: 10vh;
+    } 
+}
+
+@media (max-width: 1036px) {
+    .header-contents h1{
+        margin-top: 25px;
+        font-size: 44px;
+    }
+    .header{
+        height: 10vh;
+    } 
+}
+
+@media (max-width: 948px) {
+    .header-contents h1{
+        margin-top: 15px;
+        font-size: 40px;
+    }
+    .header{
+        height: 10vh;
+    } 
+}
+
+@media (max-width: 864px) {
+    .header h1{
+        font-size: 38px;
+    }
+    .header{
+        height: 10vh;
+    } 
+}
+
+@media (max-width: 840px) {
+    .header-contents{
+        max-width: 62%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header{
+        height: 10vh;
+    }       
+}
+
+@media (max-width: 576px) {
+    .header{
+        height: 130px;
+    }  
+
+    .discount-container{
+        width: 90vw;
+    }
+
+    .discount-container h1{
+        font-size: 34px;
+        width: 100%;
+        margin-top: 23px;
+        text-align: center;
+    }
+
+    .discount-container .view-btn{
+        padding: 6px 7px;
+    }
+}
+
+@media (min-width: 576px){
+    .header{
+        height: 230px;
+    }   
+
+    .discount-container{
+        width: 90vw;
+    }
+
+    .discount-container h1{
+        font-size: 34px;
+        width: 100%;
+        margin-top: 73px;
+        text-align: center;
+    }
+
+    .discount-container .view-btn{
+        padding: 6px 7px;
+    }
+}

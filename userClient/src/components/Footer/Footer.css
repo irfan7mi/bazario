@@ -1,0 +1,98 @@
+body{
+    margin: 0px;
+}
+
+.footer-card{
+    margin-top: 30px;
+    min-width: 230px;
+    color: white;
+    padding: 50px 0px;
+    background-color: rgb(15, 15, 15);
+}
+
+.footer-about li{
+    list-style: none;
+}
+
+.fooder-title{
+    color: white;
+    width: 90%;
+    margin: auto;
+    justify-items: left;
+    display: grid;
+    font-size: 16px;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 30px;
+}
+
+.contact-title{
+    margin-left: 104px;
+    text-align: right;
+}
+
+.social-media-title{
+    margin-left: 84px;
+    text-align: right;
+}
+
+.fooder-content{
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.footer-about{
+    margin-left: 28%;
+    text-align: center;
+}
+
+.company-about{
+    text-align: justify;
+}
+
+.footer-contact{
+    text-align: right;
+    margin-left: 32px;
+}
+
+.hr-line{
+    width: 96%;
+    border: 0.1px solid rgba(236, 195, 195, 0.247);
+    margin: 15px auto;
+}
+
+@media (max-width: 576px) {
+    .footer-card{
+        margin-top: 20px;
+        color: white;
+        padding: 20px 0px;
+    }    
+
+    .fooder-title{
+        font-size: 8px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .fooder-content{
+        margin-top: 10px;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.795);
+    }
+
+    .contact-title{
+        margin-left: 0px;
+        font-size: 14px;
+        text-align: right;
+    }
+    
+    .social-media-title{
+        margin-left: 0px;
+        font-size: 14px;
+        text-align: right;
+    }
+    
+    .footer-contact{
+        margin: 0px;
+        text-align: justify;
+    }
+}

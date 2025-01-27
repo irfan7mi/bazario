@@ -1,0 +1,48 @@
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  width: fit-content;
+  margin: 0px 0px 0px auto;
+  padding: 10px 20px 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.payment-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.payment-form input {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.payment-form .card-details {
+  display: flex;
+  gap: 5px;
+}
+
+.card-details input{
+  width: 100%;
+}
+
+.payment-form .submit-payment {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(151, 69, 69);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.payment-form .submit-payment:hover {
+  background-color: rgba(151, 69, 69, 0.801);
+}

@@ -1,0 +1,44 @@
+@keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-display-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+        gap: 7px;
+        min-width: 360px;
+        row-gap: 22px;
+        padding: 0px 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 576px) {
+    .product-display-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+        gap: 7px;
+        min-width: 360px;
+        row-gap: 22px;
+        padding: 0px 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 700px) {
+    .product-display-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+        gap: 10px;
+        min-width: 600px;
+        row-gap: 10px;
+        animation: FadeIn 1s;
+        padding: 8px 40px;
+    }
+}
