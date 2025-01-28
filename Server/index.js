@@ -182,7 +182,7 @@ const storage = new CloudinaryStorage({
 
 const upload = multer({ storage });
 
-app.post("/add", authMiddleWare, upload.single('image'), async (req, res) => {
+app.post("/add", upload.single('image'), async (req, res) => {
   try {
     const { name, description, price, category } = req.body;
 
