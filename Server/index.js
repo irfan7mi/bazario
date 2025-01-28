@@ -193,7 +193,6 @@ app.post("/add", authMiddleWare, upload.single('image'), async (req, res) => {
     console.log("Request body:", req.body);
     console.log("Uploaded file:", req.file);
 
-    const imageFilename = req.file.filename;
     const product = new ProductModel({
       image: req.file.path,
       name,

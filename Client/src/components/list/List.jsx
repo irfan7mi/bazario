@@ -10,7 +10,7 @@ const List = () => {
   const {url} = useContext(StoreContext)
 
   const fetchFoodList = async () => {
-    const response = await axios.get(url+"/food/list")
+    const response = await axios.get(url+"/product/list")
     setData(response.data.data)
   }
 
