@@ -167,7 +167,7 @@
     
     .price-info{
         margin-left: auto;
-        margin-right: 10px;
+        margin-right: 0px;
         font-size: 14px;
     }
         
@@ -211,6 +211,7 @@
 
     .product-display-rating {
         font-size: 13px;
+        margin-top: 6px;
     }
 }
 
