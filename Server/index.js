@@ -29,7 +29,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.json({ success: true, message: 'Welcome to DooRFooD API!' });
+  res.json({ success: true, message: 'Welcome to bazario API!' });
 });
 
 app.get('/favicon.ico', (req, res) => {
