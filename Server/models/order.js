@@ -19,5 +19,5 @@ const orderSchema = new mongoose.Schema({
   address: {type: Object, required: true }
 });
 
-const OrderModel = mongoose.model("orders", orderSchema);
+const OrderModel = mongoose.model("bazario-orders", orderSchema);
 export default OrderModel;
