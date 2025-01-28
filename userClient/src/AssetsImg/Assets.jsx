@@ -48,24 +48,12 @@ export const menu_list = [
         menu_image: earbuds
     },
     {
-        menu_name: 'KEYBOARD',
-        menu_image: keyboard
-    },
-    {
-        menu_name: 'LUGGAGE BAG',
-        menu_image: luggage
-    },
-    {
         menu_name: 'MOUSE',
         menu_image: mouse
     },
     {
         menu_name: 'FAN',
         menu_image: fan
-    },
-    {
-        menu_name: 'T-SHIRT',
-        menu_image: tshirt
     },
     {
         menu_name: 'POT',
