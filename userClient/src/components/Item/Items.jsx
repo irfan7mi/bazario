@@ -10,7 +10,7 @@ const Item = ({ id, name, image, description, price, averageRating }) => {
     return (
         <div className="product-display-container">
             <div className="product-img-cart-count">
-            <img className="product-img-container" src={`${url}/uploads/images/`+image}  alt={name || "Product Image"} onError={(e) => {e.target.src = 'https://via.placeholder.com/50';}}/>
+            <img className="product-img-container" src={image || 'https://via.placeholder.com/50'} alt={name || "Food Image"} onError={(e) => {e.target.src = 'https://via.placeholder.com/50';}}/>
                 {!cartItem[id] ? (
                     <p className="add-item-zero" onClick={() => {addToCart(id)}}>
                         <AddIcon fontSize='small'/>
