@@ -1,4 +1,6 @@
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const authMiddleware = async (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -8,7 +10,8 @@ const authMiddleware = async (req, res, next) => {
 
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const secret = process.env.JWT_SECRET || 'default_secret'; // Replace 'default_secret' in production
+    const decoded = jwt.verify(token, secret);
     req.user = decoded;
     next();
   } catch (error) {
