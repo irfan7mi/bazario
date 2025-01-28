@@ -53,7 +53,7 @@ const Navbar = ({setShowLogIn}) => {
                 if (category === "All" || category === item.category) {
                   return (
                 <div className='search-product-data' onClick={() => setMenu('home')} key={item._id}>
-                  <img src={`${url}/uploads/images/`+item.image} alt="img" />
+                  <img src={item.image} alt="img" />
                   <a href='#menu-list' onClick={() => {handleProductData(item._id);}}>{item.name}</a>
                 </div>
               )}})}

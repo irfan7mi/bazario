@@ -157,7 +157,7 @@
     }
 
     .product-info{
-        height: 75px;
+        height: 100px;
     }
 
     .product-display-name{
@@ -173,7 +173,7 @@
         
     .product-display-details{
         font-size: 12px;
-        min-height: 20px;
+        height: 40px;
     }
 
     .add-item-zero{

@@ -1,6 +1,5 @@
 .header{
     max-height: 290px;
-    background-color: rgba(245, 222, 179, 0.24);
     box-shadow: 0px 0px 6px rgb(216, 200, 200);
     margin: 95px auto 10px;
     background-color: rgb(151, 69, 69);
@@ -145,6 +144,9 @@
 
     .discount-container .view-btn{
         padding: 6px 7px;
+        background-color: white;
+        border: none;
+        color: rgb(151, 69, 69);
     }
 }
 
