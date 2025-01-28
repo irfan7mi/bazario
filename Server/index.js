@@ -16,7 +16,7 @@ import 'dotenv/config'
 import authMiddleWare from './middleware/auth.js'
 import AdminModel from './models/admin.js'
 const JWT_SECRET = process.env.JWT_SECRET || "random#secret"
-const url = process.env.MONGO_URI || 'mongodb+srv://mi2268242:q0zQ2HuspFPfohf0@bazario.gxuxa.mongodb.net/?retryWrites=true&w=majority&appName=doorfood';
+const url = 'mongodb+srv://mi2268242:q0zQ2HuspFPfohf0@bazario.gxuxa.mongodb.net/?retryWrites=true&w=majority&appName=doorfood';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { v2 as cloudinary } from 'cloudinary';
@@ -47,7 +47,7 @@ const createToken = (id) => {
   return jwt.sign({id}, JWT_SECRET)
 }
 
-app.post("/admin/login1",async (req, res) => {
+app.post("/admin/login",async (req, res) => {
   const {email, password} = req.body
   try{
     const exist = await AdminModel.findOne({email})
@@ -77,7 +77,7 @@ app.post("/admin/login1",async (req, res) => {
   }
 })
 
-app.post("/admin/login", async (req, res) => {
+app.post("/admin/login1", async (req, res) => {
   const{email, password} = req.body
   try{
     let user = await AdminModel.findOne({email})
