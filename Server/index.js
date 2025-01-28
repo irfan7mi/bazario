@@ -47,7 +47,7 @@ const createToken = (id) => {
   return jwt.sign({id}, JWT_SECRET)
 }
 
-app.post("/admin/login",async (req, res) => {
+app.post("/admin/login1",async (req, res) => {
   const {email, password} = req.body
   try{
     const exist = await AdminModel.findOne({email})
@@ -77,7 +77,7 @@ app.post("/admin/login",async (req, res) => {
   }
 })
 
-app.post("/admin/login1", async (req, res) => {
+app.post("/admin/login", async (req, res) => {
   const{email, password} = req.body
   try{
     let user = await AdminModel.findOne({email})
