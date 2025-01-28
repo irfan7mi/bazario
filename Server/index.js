@@ -16,6 +16,7 @@ import 'dotenv/config'
 import authMiddleWare from './middleware/auth.js'
 import AdminModel from './models/admin.js'
 const JWT_SECRET = process.env.JWT_SECRET || "random#secret"
+const url = process.env.MONGO_URI || 'mongodb+srv://mi2268242:q0zQ2HuspFPfohf0@bazario.gxuxa.mongodb.net/?retryWrites=true&w=majority&appName=doorfood';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { v2 as cloudinary } from 'cloudinary';
@@ -35,7 +36,7 @@ app.get('/favicon.ico', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'favicon.ico'));
 });
 
-app.use(cors({ origin: 'https://doorfood-app-client.vercel.app' }));
+app.use(cors({ origin: 'https://bazario-app.vercel.app/' }));
 
 app.use(cors({
   origin: "*", // Allow all origins (for development)
@@ -165,14 +166,19 @@ app.get("/user/list", async (req, res) => {
   }
 })
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/images');
+cloudinary.config({
+  cloud_name: "dit8o6iph", 
+  api_key: "715248412946731",      
+  api_secret: "Cc1x3XX6Ti7eC8sJm7pN1u_-jf0", 
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "bazario-app", 
+    allowed_formats: ["jpg", "png", "jpeg"], 
   },
-  filename: (req, file, cb) => {
-    cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
-  }
-})
+});
 
 const upload = multer({ storage });
 
@@ -189,7 +195,7 @@ app.post("/add", authMiddleWare, upload.single('image'), async (req, res) => {
 
     const imageFilename = req.file.filename;
     const product = new ProductModel({
-      image: imageFilename,
+      image: req.file.path,
       name,
       description,
       price: parseFloat(price),
@@ -372,7 +378,7 @@ app.use("/review", reviewRouter)
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/bazario');
+    await mongoose.connect(url);
     console.log('DB Connected');
   } catch (err) {
     console.error('DB Connection Error:', err);

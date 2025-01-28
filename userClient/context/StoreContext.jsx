@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const url = "http://localhost:4000"
+  const url = "https://bazario-server.vercel.app"
   const [logIn, setLogIn] = useState(false);
   const [token, setToken] = useState("");
   
