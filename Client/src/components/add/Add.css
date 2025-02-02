@@ -43,6 +43,26 @@
   outline: none;
 }
 
+.add-search-container{
+  display: flex;
+  width: 100%;
+  gap: 10px
+}
+
+.add-search-container input{
+  width: 100%;
+}
+
+.add-search-container button{
+  margin: 0px;
+  margin-left: auto;
+  border-radius: 4px;
+
+  background-color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
 .price-input{
   width: 120px;
   display: inline;
