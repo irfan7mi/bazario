@@ -7,6 +7,7 @@ import { StoreContext } from "../../../context/Context.jsx";
 const Add = () => {
   const [image, setImage] = useState(false);
   const {url} = useContext(StoreContext)
+  const [itemName, setItemName] = useState("");
   const [data, setData] = useState({
     name: "",
     description: "",
@@ -19,6 +20,27 @@ const Add = () => {
     const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
     setData((data) => ({ ...data, [name]: value }));
   };
+
+  const searchItem = (e) => {
+    e.preventDefault();
+    if (!token) {
+      toast.error("User not logged in! Please log in to proceed.");
+      return;
+    }
+    try{
+      const response = axios.post(`{url}/search`, itemName);
+      if(response.data.success){
+        setData.description = response.data.data;
+        console.log(data);
+      }
+      else{
+        toast.error("Failed to search item. Please try again.");
+      }
+    }
+    catch (error){
+      toast.error(error.response?.data?.message || "Failed to add item. Please try again.");
+    }
+  }
 
   const Submit = async (e) => {
     e.preventDefault();
@@ -91,6 +113,7 @@ const Add = () => {
           )}
 
           <label htmlFor="">Product name</label>
+          <div className="add-search-container">
           <input
             type="text"
             name="name"
@@ -99,7 +122,8 @@ const Add = () => {
             onChange={eventHandler}
             required
           />
-
+            <button className="search-item" onClick={searchItem}>Search</button>
+          </div>
           <label htmlFor="">Product description</label>
           <textarea
             name="description"
