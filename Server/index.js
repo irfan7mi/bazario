@@ -17,8 +17,8 @@ import { fileURLToPath } from 'url';
 import 'dotenv/config'
 import authMiddleWare from './middleware/auth.js'
 import AdminModel from './models/admin.js'
-const JWT_SECRET = process.env.JWT_SECRET || "random#secret"
-const url = process.env.MONGO_URI || 'mongodb+srv://mi2268242:q0zQ2HuspFPfohf0@doorfood.gxuxa.mongodb.net/?retryWrites=true&w=majority&appName=bazario';
+const JWT_SECRET = process.env.JWT_SECRET
+const url = process.env.MONGO_URI;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { v2 as cloudinary } from 'cloudinary';
