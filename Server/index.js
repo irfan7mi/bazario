@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
 import multer from 'multer'
+import axios from 'axios'
 import jwt from 'jsonwebtoken'
 import validator from 'validator'
 import bcrypt from 'bcryptjs'
@@ -11,6 +12,7 @@ import orderRouter from './routes/orderRouter.js'
 import reviewRouter from './routes/reviewRouter.js'
 import path from 'path'
 import fs from 'fs'
+import openAI from 'openai'
 import { fileURLToPath } from 'url';
 import 'dotenv/config'
 import authMiddleWare from './middleware/auth.js'
@@ -165,6 +167,32 @@ app.get("/user/list", async (req, res) => {
     res.send({success: false, message: "Error"})
   }
 })
+
+const openai = new openAI({
+  apiKey: process.env.OPEN_AI_API_KEY,
+});
+
+app.get("/getSpecs", async (req, res) => {
+  const model = req.body.item;
+  if(!model) return res.status(400).json({error: "Device model is required!"});
+  try{
+    const chatGPTSpecs = await fetchChatGPTSpecs(model);
+    res.json({success: true, data: chatGPTSpecs});
+  }
+  catch(error){
+    res.status(500).json({error: "Error fetching!"});
+  }
+});
+
+const fetchChatGPTSpecs = async (model)=> {
+  const promptDesc = `Give ${model} description under 20words`;
+  const promptPrice = `Give ${model} price only.`;
+  const promptSpec = `Give ${model} specs description subtitle wise.`;
+  const response = await openai.chat.completions.create({
+    message: [{role: "user", constent: {promptDesc, promptPrice, promptSpec}}],
+    model: "gpt-4",
+  });
+};
 
 cloudinary.config({
   cloud_name: "dit8o6iph", 
