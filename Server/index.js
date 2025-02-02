@@ -39,6 +39,7 @@ app.get('/favicon.ico', (req, res) => {
 });
 
 app.use(cors({ origin: 'https://bazario-app.vercel.app/' }));
+app.use(cors({ origin: 'https://bazario-admin.vercel.app/' }));
 
 app.use(cors({
   origin: "*", // Allow all origins (for development)
