@@ -169,10 +169,6 @@ app.get("/user/list", async (req, res) => {
   }
 })
 
-const openai = new openAI({
-  apiKey: process.env.OPEN_AI_API_KEY,
-});
-
 app.get("/getSpecs", async (req, res) => {
   const model = req.body.item;
   if(!model) return res.status(400).json({error: "Device model is required!"});
