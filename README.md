@@ -76,22 +76,38 @@ The client `package.json` file defines the frontend dependencies and scripts for
 How to Use This Project
 Server Installation
 Clone the repository:
+
 git clone https://github.com/irfan7mi/bazario.git
-cd bazario
+
+Navigate to the bazario directory.
+
 Navigate to the server directory:
+
 cd server
+
 Install dependencies:
+
 npm install
-Ensure that your .env file is set up with necessary environment variables (e.g., DB_URI, JWT_SECRET, CLOUDINARY_CLOUD_NAME).
+
+Ensure that your .env file is set up with the necessary environment variables (e.g., DB_URI, JWT_SECRET, CLOUDINARY_CLOUD_NAME).
+
 Run the server:
+
 npm run start
+
 The backend will be running at http://localhost:5000.
 
 Client Installation
 Navigate to the client directory:
+
 cd client
+
 Install dependencies:
+
 npm install
+
 Start the development server:
+
 npm run dev
+
 The frontend will be available at http://localhost:3000.
